@@ -68,37 +68,37 @@ while going:
             print("midi channel 1")
             print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
-            pygame.draw.circle(screen, (0, 0, 255), (fretPos[note-64], stringPos[1]), 12, 0)
+            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note-64], stringPos[1]), 12, 0)
             rate = 0.05
         if (midi_events[0][0][0] == 145):
             print("midi channel 2")
             print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
-            pygame.draw.circle(screen, (0, 0, 255), (fretPos[note-59], stringPos[2]), 12, 0)
+            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note-59], stringPos[2]), 12, 0)
             rate = 0.05
         if (midi_events[0][0][0] == 146):
             print("midi channel 3")
             print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
-            pygame.draw.circle(screen, (0, 0, 255), (fretPos[note -55], stringPos[3]), 12, 0)
+            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note -55], stringPos[3]), 12, 0)
             rate = 0.05
         if (midi_events[0][0][0] == 147):
             print("midi channel 4")
             print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
-            pygame.draw.circle(screen, (0, 0, 255), (fretPos[note - 50], stringPos[4]), 12, 0)
+            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note - 50], stringPos[4]), 12, 0)
             rate = 0.05
         if (midi_events[0][0][0] == 148):
             print("midi channel 5")
             print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
-            pygame.draw.circle(screen, (0, 0, 255), (fretPos[note - 45], stringPos[5]), 12, 0)
+            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note - 45], stringPos[5]), 12, 0)
             rate = 0.05
         if (midi_events[0][0][0] == 149):
             print("midi channel 6")
             print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
-            pygame.draw.circle(screen, (0, 0, 255), (fretPos[note - 40], stringPos[6]), 12, 0)
+            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note - 40], stringPos[6]), 12, 0)
             rate = 0.05
 
 
