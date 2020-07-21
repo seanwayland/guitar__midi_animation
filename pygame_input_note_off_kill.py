@@ -69,37 +69,38 @@ while going:
             going = False
         if e.type in [KEYDOWN]:
             going = False
-
     if i.poll():
         midi_events = i.read(10)
-        #print(str(midi_events[0][0]))
+        print(str(midi_events[0][0]))
+        #print(str(midi_events))
+
         if (midi_events[0][0][0] == 144):
             #print("midi channel 1")
             #print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
             playing1.add(note)
-            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note-64], stringPos[1]), 12, 0)
+            #pygame.draw.circle(screen, (255, 255, 0), (fretPos[note-64], stringPos[1]), 12, 0)
 
         if (midi_events[0][0][0] == 145):
             #print("midi channel 2")
             #print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
             playing2.add(note)
-            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note-59], stringPos[2]), 12, 0)
+            #pygame.draw.circle(screen, (255, 255, 0), (fretPos[note-59], stringPos[2]), 12, 0)
 
         if (midi_events[0][0][0] == 146):
             #print("midi channel 3")
             #print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
             playing3.add(note)
-            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note -55], stringPos[3]), 12, 0)
+            #pygame.draw.circle(screen, (255, 255, 0), (fretPos[note -55], stringPos[3]), 12, 0)
 
         if (midi_events[0][0][0] == 147):
             #print("midi channel 4")
             #print(str(midi_events[0][0][1]))
             note = midi_events[0][0][1]
             playing4.add(note)
-            pygame.draw.circle(screen, (255, 255, 0), (fretPos[note - 50], stringPos[4]), 12, 0)
+            #pygame.draw.circle(screen, (255, 255, 0), (fretPos[note - 50], stringPos[4]), 12, 0)
 
         if (midi_events[0][0][0] == 148):
             #print("midi channel 5")
@@ -119,46 +120,26 @@ while going:
         if (midi_events[0][0][0] == 128):
 
                 playing1.clear()
-                playing2.clear()
-                playing3.clear()
-                playing4.clear()
-                playing5.clear()
-                playing6.clear()
+
         if (midi_events[0][0][0] == 129):
-            playing1.clear()
+
             playing2.clear()
-            playing3.clear()
-            playing4.clear()
-            playing5.clear()
-            playing6.clear()
+
 
         if (midi_events[0][0][0] == 130):
-            playing1.clear()
-            playing2.clear()
+
             playing3.clear()
-            playing4.clear()
-            playing5.clear()
-            playing6.clear()
+
         if (midi_events[0][0][0] == 131):
-            playing1.clear()
-            playing2.clear()
-            playing3.clear()
+
             playing4.clear()
-            playing5.clear()
-            playing6.clear()
+
         if (midi_events[0][0][0] == 132):
-            playing1.clear()
-            playing2.clear()
-            playing3.clear()
-            playing4.clear()
+
             playing5.clear()
-            playing6.clear()
+
         if (midi_events[0][0][0] == 133):
-                playing1.clear()
-                playing2.clear()
-                playing3.clear()
-                playing4.clear()
-                playing5.clear()
+
                 playing6.clear()
 
         for n in playing1:
